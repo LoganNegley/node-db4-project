@@ -4,7 +4,9 @@ exports.up = function(knex) {
       knex.schema
         .createTable('recipes', tbl =>{
             tbl.increments();
-            tbl.string('recipe_name').notNullable().unique();
+            tbl.string('recipe_name')
+            .notNullable()
+            .unique();
         })
         .createTable('ingredients', tbl =>{
             tbl.increments();
@@ -22,7 +24,8 @@ exports.up = function(knex) {
             tbl.integer('recipe_id')
                 .unsigned()
                 .notNullable()
-                .references('recipe.id');
+                .references('id')
+                .inTable('recipes');
         })
   );
 };
