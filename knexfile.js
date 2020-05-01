@@ -9,11 +9,11 @@ module.exports = {
     },
 
     migrations:{
-     directory: './data/migrations.js'
+     directory: './data/migrations.js'//creates database tables
     },
 
     seeds: {
-      directory:'./data/seeds.js'
+      directory:'./data/seeds.js'//populates data base with content
     }
   },
 };
