@@ -1,5 +1,4 @@
 // Update with your config settings.
-
 module.exports = {
 
   development: {
@@ -14,7 +13,7 @@ module.exports = {
     },
 
     seeds: {
-      directory:'./data/seeds.js';
+      directory:'./data/seeds.js'
     }
   },
 };
