@@ -16,7 +16,7 @@ exports.up = function(knex) {
                 .references('id')
                 .inTable('recipes');
         })
-        .createTable('steps', tble =>{
+        .createTable('steps', tbl =>{
             tbl.increments();
             tbl.string('instructions').notNullable();
             tbl.integer('recipe_id')
