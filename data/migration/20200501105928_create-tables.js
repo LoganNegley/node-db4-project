@@ -28,5 +28,8 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  
+  return knex.schema
+  .dropTableIfExists('steps')
+  .dropTableIfExists('ingredients')
+  .dropTableIfExists('recipes');
 };
